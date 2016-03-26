@@ -1,0 +1,193 @@
+.fitPopover {
+	position: absolute;
+	z-index: 500;
+	color: white;
+	white-space:nowrap;
+	z-index: 200000000;
+	-webkit-transform: translateZ(0);
+	backface-visibility: hidden;
+	text-align: center;
+	left: -9999999px;
+}
+
+
+.fitPopover.inviteMenu {
+	width: 400px;
+}
+
+.fitPopover.inviteMenu .instructions {
+	color: white;
+	width: 100%;
+	margin-top: 15px;
+	margin-bottom: 5px;
+}
+
+.fitPopover.inviteMenu .copiedText {
+	position: absolute;
+	bottom: 25px;
+	right: 90px;
+	display: none;
+}
+
+.fitPopover.inviteMenu .copyButton {
+	margin-bottom: 15px;
+	border: 1px solid hsla(0, 0%, 75%, 1.0);
+	background-color: hsla(0, 0%, 50%, 1.0)
+}
+
+.fitPopover.inviteMenu .copyButton.zeroclipboard-is-hover {
+	background-color: hsla(0, 0%, 40%, 1.0);
+}
+
+
+.panelsMenu li {
+	opacity: 0.6;
+}
+
+.fitPopover li.ticked {
+	opacity: 1;
+	background-image: none;
+	color: #ffffff;
+	text-shadow: 0px 0px 1px hsla(0, 0%, 0%, 1);
+	background:-webkit-linear-gradient(top, #005db5, #0e9ee2);
+	box-shadow:hsla(0,0%,0%, 0.7) 0px 0px 3px inset;
+	background-repeat: no-repeat;
+	background-size:100%
+}
+
+.fitPopover li.ticked.depressed {
+	background:-webkit-linear-gradient(top, #00519f, #087ed0);
+box-shadow:hsla(0,0%,0%, 0.7) 0px 0px 3px inset;
+
+}
+
+.fitPopover .videoPanel:after {
+	content:  "Audience";
+}
+
+.fitPopover .notesPanel:after {
+	content:  "Chat";
+}
+
+.fitPopover .videoPanel.ticked:after {
+	content:  "Audience";
+}
+
+.fitPopover .notesPanel.ticked:after {
+	content:  "Chat";
+}
+
+.fitPopoverContent {
+	border-radius:6px;
+	background-color: hsla(0,0%,0%, 0.8);
+	border: 1px hsla(0,0%,100%, 0.7) solid;
+	font-size: 13px;
+	font-family: arial;
+	color: #999999;
+	white-space:nowrap;
+	padding: 0;
+	text-shadow: 0px 0px 1px hsla(0, 0%, 0%, 1);
+	//-webkit-box-shadow: 0px 2px 6px 4px hsla(0,0%,0%, 0.3);
+}
+
+.fitPopover hr {
+	background-color: hsla(0,0%,40%, 1);
+	height: 1px;
+	border-width: 0;
+	margin: 0;
+}
+
+.fitPopover li {
+	text-align: left;
+	padding: 0 40px 0 0;
+	line-height: 3;
+	vertical-align: top;
+	height: 40px;
+	
+	background:-webkit-linear-gradient(top, #333333, hsla(0,0%,0%, 0.9));
+	box-shadow:hsla(0,0%,0%, 0.75) 0px 0px 1px inset;
+}
+
+.fitPopover li:last-of-type {
+	-webkit-border-bottom-left-radius: 8px;
+	-webkit-border-bottom-right-radius: 8px;
+}
+
+.fitPopover li:first-of-type {
+	-webkit-border-top-left-radius: 8px;
+	-webkit-border-top-right-radius: 8px;
+}
+
+.fitPopover li.hover{
+	background:-webkit-linear-gradient(top, #222222, hsla(0,0%,0%, 0.95));;
+	opacity: 1;
+}
+
+
+.fitPopover li.depressed {
+	background:-webkit-linear-gradient(top, #222222, #555555);
+	-webkit-box-shadow: 0px 3px 6px 3px hsla(0,0%,0%, 0.4) inset;
+}
+
+
+.fitPopoverIcon {
+	background-image:url('../img/x.png');
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size:contain;
+	//border: 1px white solid;
+	width: 32px;
+	height: 40px;
+	display: inline-block;
+	text-indent: -100%;
+	overflow: hidden;
+	margin-right: 7px;
+	margin-left: 9px;
+}
+
+
+.minutesItem .fitPopoverIcon {background-image:url('../img/iconMinutes.png')}
+
+.networkItem .fitPopoverIcon {background-image:url('../img/iconNetwork.png')}
+
+.infoItem .fitPopoverIcon {background-image:url('../img/icn_meetinginfo_normal.png')}
+
+.videoItem .fitPopoverIcon {background-image:url('../img/iconCameraGreen.png')}
+
+.audioItem .fitPopoverIcon {background-image:url('../img/iconAudioGreen.png')}
+
+.recordItem .fitPopoverIcon {background-image:url('../img/iconRecord.png')}
+
+.participantsItem .fitPopoverIcon {background-image:url('../img/iconParticipants.png')}
+
+.chatItem .fitPopoverIcon {background-image:url('../img/iconChat.png')}
+
+.settingsItem .fitPopoverIcon {background-image:url('../img/iconSettings.png')}
+
+
+.muteControl  {border-top-left-radius: 8px;border-top-right-radius: 8px}
+.endLeave  {border-bottom-left-radius: 8px;border-bottom-right-radius: 8px}
+
+
+
+.nubDark {
+	display: inline-block;
+	width: 24px;
+	height: 14px;
+	background-image: url('../img/pipDark.png');
+	background-repeat: no-repeat;
+	background-size:contain;
+	position: relative;
+	opacity: 1;
+}
+
+.down {
+	-webkit-transform-origin: 50% 50%;
+	-webkit-transform:  rotate(180deg);
+	top: -4px;
+}
+
+.up {
+	top: 5px;
+	display: none;
+}

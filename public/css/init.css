@@ -1,0 +1,13 @@
+#conversation,
+#thumbnail,
+#Active,
+#canvas>.self,
+.brady,
+#shareContainer,
+#shareContainerMaximized,
+#activeSpeakerContainer,
+#activeSpeakerContainer>div,
+.pageControlRight,
+.pageControlLeft {
+	display: none;
+}

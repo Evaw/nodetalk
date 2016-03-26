@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Online Meeting</title>
+
+<link rel="stylesheet" href="/css/reset.css" type="text/css" />
+<link rel="stylesheet" href="/css/share.css" type="text/css" />
+<link rel="stylesheet" href="/css/main.css" type="text/css" />
+<link rel="stylesheet" href="/css/themes.css" type="text/css" />
+<link rel="stylesheet" href="/css/webrtc.css" type="text/css" />
+<link rel="stylesheet" href="/css/menus.css" type="text/css" />
+<link rel="stylesheet" href="/css/fitPopover.css" type="text/css" />
+
+<script type="text/javascript">
+	window.pbSettings = {
+		roomName: "<%= @roomName %>",
+		production: <%= @production %>
+	};
+</script>
+<script src="/js/requirejs.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+</head>
+<body class="Auto style1">
+<div id='buttonShade'></div>
+<!--<div class="message">hello</div>-->
+	
+<div class="prototypeTools menuControl">Prototype Tools</div>	
+<div id="spot"></div>
+
+<header>
+
+
+<div id="leftButtons">
+<!--<div class="headerButton settingsButton"><div class="buttonIcon">Icon</div><div class="label">Settings</div></div>-->
+<div class="headerButton infoButton"><div class="buttonIcon">Icon</div><div class="label">Meeting Info.</div></div>
+
+</div>
+
+
+<div id="meetingName">Meeting Name<div id="meetingInfo">i</div></div>
+
+<div id="centralButtons">
+<div class="headerButton micButton micOn"><div class="buttonIcon">Icon</div><div class="label"></div></div>
+<div class="headerButton cameraButton videoOn"><div class="buttonIcon">Icon</div><div class="label"></div></div>
+<div class="headerButton shareButton"><div class="buttonIcon">Icon</div><div class="label">Share</div></div>
+<div class="headerButton minutesButton"><div class="buttonIcon">Icon</div><div class="label">Minutes</div></div>
+<div class="headerButton leaveButton"><div class="buttonIcon">Icon</div><div class="label">Leave</div></div>
+<div class="headerButton moreButton"><div class="buttonIcon">Icon</div><div class="label">More</div></div>
+
+</div>
+<div id="rightButtons">
+<!--<div class="headerButton settingsButton"><div class="buttonIcon">Icon</div><div class="label">Settings</div></div>-->
+<div class="headerButton networkButton"><div class="buttonIcon">Icon</div><div class="label">Network</div></div>
+
+</div>
+</header>
+
+<div class="fitPopover moreMenu">
+	<div class="nubDark up"></div>
+	<div class="fitPopoverContent">
+		<ul class="more">
+			<li class="videoItem overflowItem"><span class="fitPopoverIcon">x</span></li>
+			<li class="infoItem overflowItem"><span class="fitPopoverIcon">x</span>Meeting Info.</li>
+			<li class="networkItem overflowItem"><span class="fitPopoverIcon">x</span>Network</li>
+			<li class="minutesItem overflowItem"><span class="fitPopoverIcon">x</span>Minutes</li>
+			<hr/>
+			<li class="audioItem"><span class="fitPopoverIcon">x</span>Switch Audio</li>
+			<li class="recordItem"><span class="fitPopoverIcon">x</span>Record</li>
+			<li class="participantsItem"><span class="fitPopoverIcon">x</span>Participants</li>
+			<li class="chatItem"><span class="fitPopoverIcon">x</span>Chat with All</li>
+			<li class="settingsItem"><span class="fitPopoverIcon">x</span>Settings</li>
+		</ul>
+	</div>
+	<div class="nubDark down"></div>
+</div>
+
+
+<footer>
+
+
+</footer>
+
+
+<div id="canvas" class="p1">
+<!--<video autoplay></video>-->
+
+	<div class="placeholder"></div>
+	
+	
+
+	
+	<section class="brady">
+		
+		<div class="participantContainer host dragAndDrop">
+			<div class="videoContainer currentSpeaker"><video autoplay="true" class="p2"></video></div>
+			<div class="participantName">First Lastname</div>
+			<div class="videoButton pin">&uarr;</div>
+		</div>
+		<div class="participantContainer">
+			<div class="videoContainer"><video autoplay="true" class="p3"></video></div>
+			<div class="participantName">First Lastname</div>
+			<div class="videoButton pin">&uarr;</div>
+		</div>
+		<div class="participantContainer">
+			<div class="videoContainer"><video autoplay="true" class="p4"></video></div>
+			<div class="participantName">First Lastname</div>
+			<div class="videoButton pin">&uarr;</div>
+		</div>
+		<div class="participantContainer">
+			<div class="videoContainer"><video autoplay="true" class="p5"></video></div>
+			<div class="participantName">First Lastname</div>
+			<div class="videoButton pin">&uarr;</div>
+		</div>
+		<div class="participantContainer">
+			<div class="videoContainer"><video autoplay="true" class="p6"></video></div>
+			<div class="participantName">First Lastname</div>
+			<div class="videoButton pin">&uarr;</div>
+		</div>
+		<div class="participantContainer">
+			<div class="videoContainer"><video autoplay="true" class="p7"></video></div>
+			<div class="participantName">First Lastname</div>
+			<div class="videoButton pin">&uarr;</div>
+		</div>
+		<div class="participantContainer">
+			<div class="videoContainer"><video autoplay="true" class="p8"></video></div>
+			<div class="participantName">First Lastname</div>
+			<div class="videoButton pin">&uarr;</div>
+		</div>
+		<div class="participantContainer">
+			<div class="videoContainer"><video autoplay="true" class="p9"></video></div>
+			<div class="participantName">First Lastname</div>
+			<div class="videoButton pin">&uarr;</div>
+		</div>
+		<div class="participantContainer">
+			<div class="videoContainer"><video autoplay="true" class="p10"></video></div>
+			<div class="participantName">First Lastname</div>
+			<div class="videoButton pin">&uarr;</div>
+		</div>
+		<div class="participantContainer">
+			<div class="videoContainer"><video autoplay="true" class="p11"></video></div>
+			<div class="participantName">First Lastname</div>
+			<div class="videoButton pin">&uarr;</div>
+		</div>
+		<div class="participantContainer">
+			<div class="videoContainer"><video autoplay="true" class="p12"></video></div>
+			<div class="participantName">First Lastname</div>
+			<div class="videoButton pin">&uarr;</div>
+		</div>
+	</section>
+	
+	<section id="activeSpeakerContainer">
+			<div class="participantContainer activeSpeakerVideo">
+				<div class="videoContainer"><video autoplay="true" class="p0"></video></div>
+				<div class="participantName">&lt;activeSpeaker&gt;</div>
+				<!--<div class="videoButton pin">&uarr;</div>-->
+			</div>
+			<div class="participantContainer ">
+				<div class="videoContainer"><video autoplay="true" class=""></video></div>
+				<div class="participantName">First Lastname</div>
+				<div class="videoButton pin">&uarr;</div>
+			</div>
+			<div class="participantContainer">
+				<div class="videoContainer"><video autoplay="true" class=""></video></div>
+				<div class="participantName">First Lastname</div>
+				<div class="videoButton pin">&uarr;</div>
+			</div>
+	</section>
+	
+	<section  id="shareContainer">
+		<table id="shareContainerTable">
+			<tr>
+				<td><div class="shareContent"><video autoplay="true" class="share-video"></video><div class="popoutControl"></div></div></td>
+				<td class="grabContainer"><div class="grabber"></div></td>	
+				<td><div class="presenter p2"><span>First Lastname</span></div></td>			
+			</tr>
+		</table>
+	</section>
+	
+	<section  id="shareContainerMaximized">
+		<div class="maximizeControl"></div>
+	</section>
+	
+	<section id="scrollOverflow" class="overflowStrip">
+		<div class="scrollbar"></div>
+	</section>
+	
+	<section id="dotOverflow" class="overflowStrip">
+		<div class="dots"><div class="dot selected"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+	</section>
+	
+</div>
+
+<div id="revealContainer"><div id="revealButton"></div></div>
+
+<div class=" viewModeToggle activeSpeakerMode">Active Speaker</div>
+<div class=" viewModeToggle selected gridMode">Grid</div>
+
+<div class=" pageControlRight">Page Right</div>
+<div class=" pageControlLeft">Page Left</div>
+
+<div class="dragBoundary">
+<canvas id="process-self-face-detect"></canvas>
+<canvas id="debug-self-face-detect"></canvas>
+<div id="selfVideoContainer" class="videoContainer dragAndDrop">
+
+	<video id="selfVideo" autoplay="true" class="self"></video>
+	<div id="selfFaceRect">
+	</div>
+</div>
+</div>
+<div class="tinySelf"></div>
+
+
+
+<section id="notesContent"></section>
+
+<section id="plistContent"></section>
+
+
+<div id="menuContainer" style="display:">
+	<ul class="menuPrototypeTools menu">
+		<li class="disabled screenSize sectionHeading">Window (px): <span id="x">123</span>, <span id="y">345</span></li>
+		<li class="disabled nPeers sectionHeading">Number of Peers: <span id="np">0</span></li>
+		<hr class=" "/>
+		<li class="sectionHeading">Development Tools</li>
+		<li class="renegotiate">Renegotiate Peers</li>
+		<li class="loadGifs">Load Gifs</li>
+		<li class="enableFaceTracking">Enable Face Tracking</li>
+		<li class="showFaceCanvas">Show Face Detection</li>
+		<li class="startSwitching">Start Active Speaker Switching</li>
+		<li class="enableExperimental">Enable Experimental Features</li>
+		<hr class=" "/>
+		<li class="sectionHeading">Participants (use left/right cursors)</li>
+		<li id="participants" class="participantNumber">
+			<span>2</span>
+			<span>3</span>
+			<span>4</span>
+			<span class="selected">5</span>
+			<span>6</span>
+			<span>7</span>
+			<span>8</span>
+			<span>9</span>
+			<span>10</span>
+			<span>11</span>
+			<span>12</span>
+		</li>
+		<hr class=" "/>
+		<li class="sectionHeading">View Mode</li>
+		<li class="mode defaultLayout disabled">Default</li>
+		<li class="mode activeSpeaker">Active Speaker</li>
+		<li class="mode equality selected ticked">Equal/Smart</li>
+		<li class="mode sharing disabled">Presentation/Share</li>
+		<hr class=" "/>
+		<li class="sectionHeading">Panel View</li>
+		<li id="plist" class="">Participant list</li>
+		<hr/>
+		<li class="sectionHeading">Minimum Aspect Ratio</li>
+		<li class="aspectMode">8:9</li>
+		<li class="aspectMode ">1:1</li>
+		<li class="aspectMode ">4:3</li>
+		<li class="aspectMode ">16:9</li>
+		<li class="aspectMode  selected ticked">Optimized</li>
+		<hr/>
+		<li class="sectionHeading">Switching Mode</li>
+		<li class="switchMode selected ticked disabled">Switch 1</li>
+		<li class="switchMode disabled">Switch 2</li>
+		<!--<li class="switchMode disabled">Switch 3</li>-->
+		<hr/>
+		<li class="sectionHeading">Theme</li>
+		<li class="themeMode">Wireframe only</li>
+		<li class="themeMode selected ticked">Pebble Beach 1</li>
+	</ul>
+</div>
+
+
+
+<% if !@roomName : %>
+	<section id="frontPage">
+		<div class="title">UX Concept Prototype</div>
+		<div class="disclaimer">Work in Progress - For Discussion Only</div>
+		<div class="instructions">Room Code:</div>
+		<input type="text" value="" class="meetingId">
+		<div class="startButton inactive copy-to-clipboard-zc">Enter Video Room</div>
+
+		<div class="checkboxText"><input type="checkbox" class="copy-to-clipboard-checkbox" id="clipboardCheckbox" checked="true" disabled="true"><label for="clipboardCheckbox">Copy address to clipboard</label></div>
+	</section>
+<% end %>
+</body>
+</html>

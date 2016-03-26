@@ -1,0 +1,268 @@
+.headerButton.hover {
+	//background-color: hsla(0,0%,100%, 0.15);
+	// cursor:pointer;
+	 background:-webkit-linear-gradient(top, #222222, hsla(0,0%,0%, 0.95));
+}
+
+.headerButton.ticked {
+	background-color: hsla(0,0%,40%, 0.6);	
+}
+.stop-share{
+	background:-webkit-linear-gradient(top, rgb(25, 151, 1), hsla(0,0%,0%, 0));
+	background: ;
+}
+.headerButton {
+	color: hsla(0,0%,100%, 0.75);
+	display: inline-block;height: 30px;
+	text-align: center;
+	vertical-align: top;
+	width: 70px;
+	height: 55px;
+	margin: 0;
+	font-family: arial;
+	border-radius: 0;
+
+	
+	position: relative;
+	white-space:normal;	
+}
+
+.headerButton:hover {
+	background: -webkit-linear-gradient(top, hsla(0,0%,30%, 1), transparent);
+}
+
+.headerButton.openPopover {
+	background: -webkit-linear-gradient(top, hsla(197, 92%, 46%, 1.0), transparent);
+}
+
+
+.headerButton>div {
+		display: inline-block;
+}
+
+.label {
+	width: inherit;
+	font-size: 11px;
+}
+
+#centralButtons, #rightButtons, #leftButtons {
+	position: absolute;
+	display: inline-block;
+	width: auto;
+	white-space: nowrap;
+}
+
+#centralButtons{
+	top: 0;
+	left: -3300px;
+}
+
+#rightButtons {
+	top: 0;
+	padding-right: 15px;
+	left: -3333px;
+}
+
+#leftButtons {
+	top: 0;
+	padding-left: 15px;
+	left: -3333px;
+}
+
+.buttonIcon {
+	background-image:url('../img/btn_FIT_more.png');
+	background-size:contain;
+	background-position: 50% 100%;
+	background-repeat: repeat;
+	text-indent: 100%;
+	font-size: 1000px;
+	//border: 1px solid white;
+	overflow: hidden;
+	//position: absolute;
+	width: 38px;
+	height: 32px;
+	margin-top: 7px;
+	margin-bottom: -4px;
+	display: inline-block;
+}
+
+.micOn .buttonIcon {background-image:url('../img/iconMicGreen.png');}
+.micOn .label:after {content: "Mic On";}
+.micOff .buttonIcon {background-image:url('../img/iconMicRed.png')}
+.micOff .label:after {content: "Mic Off";}
+.videoOn .buttonIcon, .more .videoOn span {background-image:url('../img/iconCameraGreen.png')}
+.videoOn .label:after, .more .videoOn:after {content: "Video On";}
+.videoOff .buttonIcon, .more .videoOff span {background-image:url('../img/iconCameraRed.png')}
+.videoOff .label:after, .more .videoOff:after {content: "Video Off";}
+.shareButton .buttonIcon {background-image:url('../img/iconShare.png')}
+.minutesButton .buttonIcon {background-image:url('../img/iconMinutes.png')}
+.moreButton .buttonIcon {background-image:url('../img/iconMore.png')}
+.leaveButton .buttonIcon {background-image:url('../img/iconLeave.png')}
+.settingsButton .buttonIcon {background-image:url('../img/iconSettings.png')}
+.networkButton .buttonIcon {background-image:url('../img/iconNetwork.png')}
+.infoButton .buttonIcon {background-image:url('../img/icn_meetinginfo_normal.png')}
+.inviteButton .buttonIcon {background-image:url('../img/iconInvite.png')}
+
+
+
+
+.headerButton:hover .buttonIcon {opacity: 1; }
+.headerButton:hover .label {opacity: 1; }
+
+
+#buttonShade {
+	position: absolute;
+	height: 120px;
+	width: 100%;
+	background: -webkit-linear-gradient(top, hsla(0, 100%, 0%, 0.7), hsla(0, 100%, 0%, 0.5), hsla(0, 100%, 0%, 0.2), hsla(0, 100%, 0%, 0));
+	display: none;
+	pointer-events:none;
+}
+
+.style1 #meetingName {
+	position: absolute;
+	top: 20px;
+	left: 0;
+	font-size: 21px;
+	font-family: Arial;
+	color: white;
+	padding-right: 30px;
+	padding-left: 30px;
+	width: 100px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	height: 30px;
+}
+
+.style1 #meetingInfo {
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-image: url(../img/icn_meetinginfo_normal.png);
+	height: 24px;
+	width: 24px;
+	text-indent: -1000px;
+	overflow: hidden;
+	background-position: 50% 50%;
+}
+#canvas {
+	background:-webkit-linear-gradient(top, hsla(0, 0%, 40%, 1.0), hsla(0, 0%, 90%, 1.0));
+}
+.style1 #canvas{
+	background: -webkit-linear-gradient(top, hsla(203, 0%, 0%, 1.0), hsla(0, 0%, 38%, 1.0));
+	
+}
+
+header footer {
+	background-color: none;
+	overflow: visible;
+}
+
+.style1 header{
+	width: 100%;
+	height: 100px;
+	background-size: contain;
+	background-image: url(../img/gradient.png);
+	background-repeat: repeat-x;
+	position: absolute
+}
+
+.style1 footer{
+	width: 100%;
+	height: 45px;
+	//background-color: hsla(201, 17%, 67%, 1.0);
+	position: absolute;
+	bottom: 0;
+	background-image: url(../img/watermark.png);
+	background-repeat: no-repeat;
+	//background-size: 140px;
+	background-position: 25px 0;
+}
+
+.style1 .videoContainer {
+
+	-webkit-border-radius: 1px;
+	//-webkit-box-shadow: hsla(204, 10%, 80%, 1.0) 0 0 0 6px,  0px 1px 5px 6px hsla(0, 0%, 0%, 0.5);
+}
+
+.style1 #selfVideoContainer {
+
+	-webkit-border-radius: 1px;
+	//-webkit-box-shadow: hsla(204, 10%, 80%, 1.0) 0 0 0 4px,  0px 1px 3px 4px hsla(0, 0%, 0%, 0.5);
+}
+
+.style1 #selfVideoContainer.minimized {
+	-webkit-box-shadow: none !important;
+}
+
+
+.style1 .participantContainer.currentSpeaker  {
+	-webkit-transform: scale(1);
+}
+
+
+
+.style1 .participantContainer.currentSpeaker .videoContainer, .style1.Active #activeSpeakerContainer .participantContainer.currentSpeaker .videoContainer {
+	outline: none;
+	-webkit-box-shadow: hsla(0, 0%, 100%, 1.0) 0 0 0 6px, 0px 1px 8px 7px hsla(198, 76%, 51%, 1.0),  0px 1px 5px 6px hsla(0, 0%, 0%, 0.5) !important;
+	//z-index: 10;
+}
+
+.ghost {
+	z-index:-1 !important
+}
+
+
+.ghost .videoContainer {
+	outline: none  !important;
+	-webkit-box-shadow: none !important;
+	border: none !important;
+	background: hsla(0, 0%, 0%, 0.1)
+}
+
+.ghost video {
+	display:none !important
+}
+
+.ghost .participantName {
+	display:none !important
+}
+
+.ghost .videoButton {
+	display:none !important
+}
+
+.style1 .participantName {
+	color: #333333;
+	font-size: 14px;
+	font-family: arial;
+	//text-align: center;
+	bottom: 0;
+	position: absolute;
+	width: 80%;
+	max-width: 270px;
+	min-width: 160px;
+	padding: 9px 0 7px 0;
+	background-color: hsla(0, 0%, 100%, 0.5);
+	white-space:nowrap;
+	outline: 1px solid hsla(0, 100%, 0%, 0.25);
+	border-bottom: none;
+}
+
+.Active.style1 .brady .participantName {
+	width: 100%;
+	max-width: 3370px;
+	min-width: 0;
+}
+
+
+
+.style1.Active .brady .videoContainer {
+		-webkit-box-shadow: hsla(203, 5%, 67%, 1.0) 0 0 0 4px,  0px 1px 3px 4px hsla(0, 0%, 0%, 0.5);
+	
+}
+
+
+
+

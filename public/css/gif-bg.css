@@ -1,0 +1,21 @@
+.tinySelf {
+	background-image: url(../img/avatarBlank.png);
+}
+
+.p1 {background-image: url(../img/miso.gif)}
+/*.p2 {background-image: url(../img/3b.gif)}*/
+.participantContainer video.p2 {background-image: url(../img/avatarBlank.png);}
+.p3 {background-image: url(../img/person4.gif)}
+.p4 {background-image: url(../img/person5.gif)}
+.p5 {background-image: url(../img/person3.gif)}
+/*.p5 {background-image: url(../img/roomView.png)}*/
+.p6 {background-image: url(../img/max.gif)}
+.p7 {background-image: url(../img/person8.gif)}
+.p8 {background-image: url(../img/2b.gif)}
+.p9 {background-image: url(../img/person6.gif)}
+.p10 {background-image: url(../img/person7.gif)}
+.p11 {background-image: url(../img/person1.gif)}
+.p12 {background-image: url(../img/person9.gif)}
+.video.self {
+	background-image: url(../img/avatarBlank.png);
+}

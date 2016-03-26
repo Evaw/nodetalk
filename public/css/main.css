@@ -1,0 +1,773 @@
+* {
+	-webkit-user-select: none;
+	cursor: default;
+	box-sizing: border-box;
+	font-family: sans-serif;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	-webkit-text-size-adjust:none;
+}
+
+#size, #mode,  #panels, #minHeight, #aspectRatio, #aspectRatio2,  #sharing, #switchingMode {font-size: 14px; overflow:hidden; white-space:nowrap}
+
+body {
+	overflow: hidden;
+}
+
+#devTools {
+	 margin-top:100px;
+	 position: absolute;
+	 display: none;
+}
+
+.dropTargetPromotion {
+	background-color: red;
+	outline: 1px solid black;
+	opacity:0.2;
+	position: absolute;
+}
+
+#pebbleBeachContainer {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left:0;
+	right:0;
+	background-color: black;
+	color: grey;
+	overflow: hidden;
+	z-index:-100;
+}
+
+video {
+	-webkit-transition: -webkit-transform 1000ms ease-out;
+}
+
+
+#spot {
+	height: 1;
+	width: 1;
+	position: absolute;
+	top: 399;
+	left: 499;
+}
+
+.no-transitions * {
+	-webkit-transition: none !important;
+}
+
+@media only screen and (max-width: 500px) {
+		
+		#canvas, #pebbleBeachContainer, .Active #canvas.p2, .Active #canvas.p1, .Equal #canvas.p2, .Smart #canvas.p2, .Equal #canvas.p1, .Smart #canvas.p1, .Share #canvas.p2, .Share #canvas.p1 {
+		
+			width: 500px;
+			right: ;
+			left: ;
+			
+		
+		}
+		
+		 .plistOpen #canvas, .plistOpen .Active #canvas.p2, .plistOpen .Active #canvas.p1, .plistOpen .Equal #canvas.p2, .plistOpen .Smart #canvas.p2, .plistOpen .Equal #canvas.p1, .plistOpen .Smart #canvas.p1, .plistOpen .Share #canvas.p2, .plistOpen .Share #canvas.p1, .plistOpen .dragBoundary {
+		
+			width: 230px;
+			right: ;
+			left: ;
+			
+		
+		}
+		
+		
+		body {
+			overflow-x: auto;
+		}
+		
+	
+		
+	}
+	
+	@media only screen and (max-height: 400px) {
+			
+			#canvas, #pebbleBeachContainer, .Active #canvas.p2, .Active #canvas.p1, .Equal #canvas.p2, .Smart #canvas.p2, .Equal #canvas.p1, .Smart #canvas.p1, .Share #canvas.p2, .Share #canvas.p1 {
+			
+				height: 400px; //header and footer height - 400px
+			
+			}
+			
+			
+			body {
+				overflow-y: visible;
+			}
+			
+			footer{
+				top: 355px;
+			}
+			
+		}
+	
+.movedDragElement{
+	z-index:10000
+}
+	
+.dropTarget {
+	position:absolute;
+	top:0;
+	left:0;
+	//background-color:red;
+	//opacity:0.3;
+	z-index:200;
+	width:20px;
+	height:20px;
+}	
+
+footer, #meetingInfo, #meetingName, .viewModeToggle, #selfVideoContainer {
+	display: none;
+}
+
+	
+#activeSpeakerContainer {
+	//background-color: blue;
+	position: absolute;
+	top: 0;
+}	
+	
+#canvas {
+	background-color:hsl(0,0%,90%);
+}
+
+#canvas, .Active #canvas.p2, .Active #canvas.p1, .Equal #canvas.p2, .Smart #canvas.p2, .Equal #canvas.p1, .Smart #canvas.p1, .Share #canvas.p2, .Share #canvas.p1 {
+	
+	position: absolute;
+	top:0;
+	bottom: 0;
+	//width: 100%;
+	right: 0;
+	left: 0;
+	//background-image: none;
+	text-align: center;
+	//white-space: nowrap;
+	font-size: 0;
+		overflow: hidden;
+	z-index: -10;
+	overflow-x: hidden ;
+	//min-width: 305px;
+}
+
+#canvas.overflowGrid, #canvas.overflowThumbnail  {padding-bottom: 0;}
+
+::-webkit-scrollbar-thumb {background-color: red;}
+
+
+
+
+
+body.notesOpen #canvas, body.notesOpen.Active #canvas {bottom: 310px;}
+
+body.plistOpen #canvas, body.plistOpen.Active #canvas, body.plistOpen .dragBoundary {right: 270px;}
+
+/*#participants {
+	position: absolute;
+	top:10px;
+	left: 15px;
+}*/
+
+#switchingMode {
+	position: absolute;
+	top:10px;
+	left: 370px;
+}
+
+#notesContent {
+	position: absolute;
+	bottom: 45px;
+	height: 265px;
+	width: 100%;
+	background-color: hsl(0,0%,45%);
+	z-index: -10;
+	display: none;
+}
+
+#plistContent {
+	position: absolute;
+	right: 0;
+	bottom: 45px;
+	top: 55px;
+	width: 270;
+	background-color: hsl(0,0%,35%);
+	z-index: -10;
+}
+
+#size {
+	position: absolute;
+	bottom:15px;
+	right: 95px;
+	color: hsl(0,0%,35%);
+}
+
+#viewport {
+	position: absolute;
+	bottom:12px;
+	left: 15px;
+}
+
+#viewport>span, #mode>span, #panels>span {padding: 1px 8px;}
+
+#mode {
+	position: absolute;
+	top:31px;
+	left: 15px;
+}
+
+#panels {
+	position: absolute;
+	top:31px;
+	left: 485px;
+}
+
+.participantContainer.reveal {
+	-webkit-transform-origin: 100% 100%;
+}
+/*<div id="sharing"><span id="isSharing">Notes</span> <span id="isNotSharing">P-list</span></div>*/
+
+#revealContainer {
+	position:absolute;
+	display:none;
+
+}
+
+.experimental {
+	display:none
+}
+
+.viewModeToggle {
+	position:absolute;
+	bottom:15px;
+	width:40px;
+	height:20px;
+	background-color: hsla(0, 0%, 0%, 0.1);
+	text-indent: -500%;
+	//border: 1px solid white;
+	overflow: hidden;
+	border: 1px solid hsla(0, 0%, 100%, 0.7);
+}
+
+.viewModeToggle.selected {
+	background-color: hsla(0, 0%, 100%, 0.7)
+}
+
+.activeSpeakerMode {
+	right:270px;
+}
+
+.gridMode {
+	right:310px
+}
+
+#revealButton {
+	position:absolute;
+	background-color: hsla(0, 0%, 100%, 0.3);
+	width:30px;
+	height:20px;
+	top:8px;
+	left:10px;
+}
+
+
+#minHeight {
+	position: absolute;
+	top:28px;
+	left: 625px;
+}
+
+#aspectRatio {
+	position: absolute;
+	top:28px;
+	left: 615px;
+}
+
+#aspectRatio2 {
+	position: absolute;
+	top:28px;
+	left: 735px;
+}
+
+#minHeight.dim {opacity: 0.5}
+
+input {
+	width: 4em;
+	-webkit-user-select: text;
+	cursor: text;
+	
+}
+
+em {
+	opacity: 0.5;
+font-style: normal;
+font-size: 90%;
+}
+#mode>span.selected, #panels>span.selected, #switchingMode>span.selected  {
+	background-color:hsl(0,0%,90%);
+	color: black;
+}
+
+ #mode>span:hover, #panels>span:hover, #switchingMode>span:hover {
+	background-color:hsl(0,0%,60%);
+	color: black;
+	cursor: pointer;
+
+}
+
+td div.p2 {
+	//outline: 3px hsla(208, 100%, 50%, 1) solid;
+	//border-image-outset: 30 30;
+}
+
+.brady td div.p2 {
+	outline: 5px hsla(208, 100%, 50%, 1) solid;
+	//border-image-outset: 30 30;
+}
+#selfFaceRect {
+	border: solid 2px #C0FFEE;
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	z-index: 9999;
+	display: none;
+}
+#process-self-face-detect,
+#debug-self-face-detect {
+	display: none;
+}
+#conversation div {
+	//min-height: 200px;
+}
+#selfVideo {
+	z-index: -1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#selfVideoContainer {
+	position: absolute;
+	bottom: 14px;
+	right: 14px;
+	//display: block;       
+	z-index: 100;
+	-webkit-transform:scaleX(-1);
+	width: 160px;
+	height: 120px;
+	background-color: black !important;
+	-webkit-box-shadow: 0px 1px 4px 2px hsla(0,0%,0%, 0.3);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	pointer-events:auto;
+}
+
+#selfVideoContainer.minimized {
+	width: 40px;
+	height: 30px;
+}
+
+#canvas>div {
+
+	position: absolute;
+	background-size: 100%;
+	display: none;
+	background-repeat: no-repeat;
+}
+
+#canvas>video {
+
+	position: absolute;
+	background-size: 100%;
+	display: none;
+	background-repeat: no-repeat;
+}
+
+.dragBoundary {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	pointer-events:none;
+}
+
+
+.p5 #conversation td>div {background-size: cover}
+
+#conversation {
+	width: 100%;
+	position: relative;
+	height: 400px;
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#conversation td {
+	background-color: ;
+	width:auto;
+	border: 20px transparent solid;
+}
+
+#conversation td>div {
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+#thumbnail {
+	position: absolute;
+	bottom: 10px;
+	left: 0px;
+	height: 90px;
+	margin-bottom: 15px;
+}
+
+.overflowThumbnail #thumbnail {bottom: 30px !important;}
+
+#thumbnail td {
+	background-color: ;
+	//height: 90px;
+	width: 170px;
+	max-width: 170px;
+	min-width: 170px;
+	border-left: 10px transparent solid;
+	border-right: 10px transparent solid;
+}
+
+#thumbnail td>div {
+	width: 100%;
+	height: 100%;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+#canvas>div#Active {
+	width: auto;
+	height: auto;
+	position: absolute;
+	top: 10px;
+	bottom: 126px;
+	left: 20px;
+	right: 20px;
+	background-size:contain;
+	//background: yellow;
+	display: block;
+	background-position: center 45%;;
+}
+
+#canvas.overflowThumbnail>div#Active {bottom: 146px !important;}
+
+section.brady {
+	width: 100%;
+	height: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	position: absolute;
+	
+}
+
+#paginationControls {
+	position:absolute;
+	left:0;
+	right:0;
+	top:200px;
+}
+
+.pageControlRight, .pageControlLeft {
+	width:25px;
+	height:50px;
+	position:absolute;
+	background-position: 50% 40%;
+	background-size: 60% 90%;
+	background-repeat: no-repeat;
+	text-indent: -500%;
+	top:0;
+}
+
+.pageControlRight:hover, .pageControlLeft:hover {
+	background-color:hsla(0, 0%, 0%, 0.3);
+}
+
+.pageControlRight {
+	right:0;
+	background-image: url(../img/pageArrowRight.png);
+}
+
+.pageControlLeft {
+	left:0;
+	background-image: url(../img/pageArrowLeft.png);
+}
+
+
+
+
+.dragAndDrop {
+	//cursor: url('../img/openhand.cur');
+}
+
+.dragAndDrop.dragObject {
+	cursor: url('../img/openhand.cur');
+	z-index:100000000;
+}
+
+.brady>table {
+	
+	//height: 90px;
+	//background-color: yellow;
+	display: block;
+	margin: 20px 0 25px 0;
+/*	margin-left: auto;
+	margin-right: auto;*/
+}
+
+
+.brady>table td {
+	background-color: ;
+	//height: 90px;
+	//width: 180px;
+	border-left: 20px transparent solid;
+	border-right: 20px transparent solid;
+	padding-bottom: 10;
+}
+
+.brady>table td>div {
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	position: relative;
+}
+
+#thumbnail td{
+	position: relative;
+}
+
+.brady>table td>div>span {
+	color: hsl(0,0%,50%);
+	display: block;
+	font-size: 12px;
+	position: absolute;
+	bottom: -20 ;
+	left: 0;
+}
+
+#conversation td{
+	position: relative;
+}
+
+#conversation span {
+	color: hsl(0,0%,50%);
+	display: block;
+	font-size: 12px;
+	position: absolute;
+	bottom: -20 ;
+	left: 0;
+}
+
+#thumbnail td>div>span {
+	color: hsl(0,0%,50%);
+	display: block;
+	font-size: 12px;
+	position: absolute;
+	bottom: -18px;
+	left: 0px;
+}
+
+.brady.square>table td {width: 140px;}
+
+.brady.square>table td>div {background-size: cover ;}
+
+.overflowStrip {
+	//background-color: background-color:hsl(0,0%,90%);
+	//background-color: hsl(0,0%,90%);
+	width: 100%;
+	position: absolute;
+	bottom: 2px;
+	height: 20px;
+	display: none;
+	text-align: center;
+}
+
+.scrollbar {
+	//background-color: background-color:hsl(0,0%,90%);
+	background-color: hsla(0,0%,0%, 0.1);
+	width: 100px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 12px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.scrollbar:hover, .scrollbar.hover  {
+	//background-color: background-color:hsl(0,0%,90%);
+	background-color: hsla(0,0%,0%, 0.2);
+}
+
+table#scrollbarParticipants {
+	width : 200px;
+	height: 13px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	outline: 1px hsl(0,0%,75%) solid;
+}
+
+table#scrollbarParticipants td {
+	border: 1px solid transparent;
+}
+
+table#scrollbarParticipants td:hover {
+	background-color: hsl(0,0%,85%);
+}
+
+table#scrollbarParticipants td.goBlue1 {
+	background-color: hsla(199, 75%, 55%, 1.0);
+}
+
+table#scrollbarParticipants td.goBlue2 {
+	background-color: hsla(199, 75%, 55%, 0.5);
+}
+
+table#scrollbarParticipants td.goBlue3 {
+	background-color: hsla(199, 75%, 55%, 0.2);
+}
+
+.dots {
+	display: inline-block;
+	position: relative;
+	top: 5px;
+	
+}
+
+.dot {
+	display: inline-block;
+	width: 20px;
+	height: 9px;
+	background-color: hsla(0,0%,0%, 0.3);
+	margin: 0 3px;
+	border-radius: 0px
+}
+
+.dot.selected {background-color: hsla(0,0%,100%, 0.7);}
+
+/*
+
+
+ul {margin-top: 10px;}
+
+li {
+	list-style-type: none;
+	margin-top: 5px;
+	margin-left: 20px;
+}*/
+
+.bigButton {
+	color: hsl(59, 0%, 100%);
+	padding: 20px 60px;
+	background-color: hsl(216, 86%, 64%);
+	border: 1px solid hsl(215, 78%, 57%);
+	width: auto;
+	display: inline-block;
+	font-size: 20px;
+	margin-top: 60px;
+	border-radius: 4px
+}
+
+.bigButton:hover {
+
+	background-color: hsl(216, 86%, 60%);
+	border: 1px solid hsl(215, 78%, 50%);;
+}
+
+.bigButton.mousedown {
+	background-color: hsl(216, 86%, 55%);
+	border: 1px solid hsl(215, 78%, 45%);;
+}
+
+
+.tinySelf {
+	position: absolute;
+	height: 31px;
+	width: 55px;
+	background-color: red;
+	display: block !important;
+	bottom: 7;
+	right: 15;
+	background-size:100% 100%;
+	visibility: hidden;
+}
+
+
+
+
+.message {
+	font-size: 24px;
+	color: white;
+	position: absolute;
+	left: 20px;
+	top: 100px;
+	z-index: 20000000;
+}
+
+.videoButton {
+	width: 20px;
+	height: 15px;
+	background-color: black;
+	position: absolute;
+	bottom: 6px;
+	color: white;
+	display: none;
+	outline: 1px solid hsla(0, 0%, 100%, 0.2);
+}
+
+.pin {
+	right: 6px;
+}
+
+.isActive .pinned, .Active .pinned {
+	display: none !important; 
+}
+.participantContainer video.p2 {
+	background-size:cover !important; background-position: 50% 50%; background-color:grey !important
+}
+.participantContainer.currentSpeaker:not(.activeSpeakerVideo) .videoContainer {
+	outline: 4px solid hsla(199, 75%, 55%, 1.0);
+	//-webkit-transform: scale(1.05)
+}
+
+.Smart .participantContainer.currentSpeaker  {
+	-webkit-transform: scale(1.05);
+}
+
+
+
+
+
+.tinySelf,
+.p1,
+.participantContainer video.p2,
+.p3,
+.p4,
+.p5,
+.p6,
+.p7,
+.p8,
+.p9,
+.p10,
+.p11,
+.p12,
+.video.self {
+	background-image: url(../img/avatarBlank.png);
+}

@@ -1,0 +1,18 @@
+{
+	"name": "webrtc-video-conf",
+	"description": "an application for two people to  do a video call",
+	"version": "0.0.1",
+	"private": true,
+	"dependencies": {
+		"express": "3.x",
+		"socket.io": "0.9.x",
+		"ect": "x",
+		"spdy": "x"
+	},
+	 "devDependencies": {
+	},
+	"engines": {
+		"node": "0.10.x",
+		"npm": "1.2.x"
+	}
+}

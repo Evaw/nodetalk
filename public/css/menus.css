@@ -1,0 +1,242 @@
+.prototypeTools {
+	background-color: transparent;
+	display: block;
+	height: 20px;
+	width: 50px;
+	cursor: default;
+	border-radius: 4px;
+	text-indent: -100%;
+	overflow: hidden;
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	z-index: 100;
+}
+
+.prototypeTools:hover {
+	background-color: hsla(0,0%,70%, 0.3);
+
+}
+
+.prototypeTools.openToolsMenu {
+	background-color: hsla(0,0%,70%, 0.6);
+}
+
+.menuPrototypeTools {
+	padding-bottom: 6px !important;
+	padding-top: 6px !important;
+	top: 26px;
+	left: 5px;
+}
+
+.participantNumber>span {
+	margin-right: 0px;
+	padding: 2px 6px;
+}
+
+.participantNumber>span.selected {
+	background-color:grey;
+	border-radius: 3px;
+}
+
+
+.screenSize.sectionHeading {
+	height: 18px;
+}
+
+
+ul.menu,
+ul.menu li,
+ul.menu ul  {
+	list-style-type:none;
+	cursor: pointer;
+	white-space:nowrap;
+	z-index:999999999;
+	vertical-align: bottom;
+	text-align: left;
+	
+}
+
+
+#menuOverlay div {
+background-color:hsla(0,0%,100%, 0);
+z-index:99999999;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+ul.menu li.hover, .participantNumber>span:hover {
+	background-color:  hsla(210,100%,60%, 0.6);
+	//-webkit-box-shadow: 0px 0px 0px 1px hsla(210,100%,50%, 0.9);
+	border-radius: 3px;
+}
+
+/*------------------------------------------------------------------*/
+
+
+ul.menu,
+ul.menu ul {
+	display: none;
+	position: absolute;
+	background-color: hsla(0,0%,0%, 0.8);
+	border: 1px solid hsla(0,0%,100%, 0.4);
+	border-radius: 0px;
+	padding: 3px;
+	-webkit-box-shadow: 0px 5px 10px hsla(0,0%,0%, 0.3);
+}
+
+ul.menu.system {
+	background-color: hsla(0, 0%, 94%, 1.0);
+	border: 1px solid hsla(0,0%,0%, 0.4);
+	-webkit-box-shadow: 4px 4px 4px -2px hsla(0,0%,0%, 0.4);
+}
+
+ul.menu.system li {
+	color: hsla(0,0%,30%, 1);
+}
+
+ul.menu.system hr {
+	background-color: hsla(0,0%,80%, 1);
+}
+
+ul.menu.system li.hover {
+	background-color:  hsla(209, 59%, 88%, 1.0);
+	border-radius: 0;
+	outline: 1px solid hsla(210, 69%, 70%, 1.0);
+}
+
+ul.menu.system li.ticked {
+	background-image: url('../img/iconTickBlack.png');
+}
+
+
+div#menuContainer ul.menu {
+	display: block
+}
+
+
+ul.menu li {
+position: relative;
+	display: block;
+	padding: 5px 10px 5px 30px;
+	font-family: sans-serif;
+	font-size: 12px;
+	color: hsla(0,0%,100%, 1);
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.menuControl.openMenu {
+background-color: hsla(0,0%,0%, 0.25) !important;
+
+}
+
+.menuControl.openMenu.hover {
+background-color: hsla(0,0%,0%, 0.25);
+
+}
+
+
+.menu li.hover>ul,
+.menu ul li.hover>ul {
+	display: block;	
+}
+
+
+.menu hr {
+	background-color: hsla(0,0%,100%, 0.3);
+	height: 1px;
+	border-width: 0;
+	margin: 4px 2px;
+}
+
+.menu hr.double {
+	margin-left: 23px;
+}
+
+
+.menu ul li ul,
+.menu ul {
+	left: 100%;
+	top: -4px;
+}
+
+
+.menu ul li {
+position: relative;
+}
+
+
+.menu li span.rightArrow {
+	margin-right: -33px;
+	padding-left: 20px;
+	height: 15px;
+	width: 10px;
+	float: right;
+	background: url('../img/arrowRight.png')  no-repeat 100% 30%;
+	background-size: 6px;
+}
+
+.menu li span.shortcutText {
+	margin-right: -28px;
+	padding-left: 30px;
+	text-align: right;
+	float: right;
+}
+
+.menu li {
+	background-size: 14px;
+	background-position: 5px 50%;
+	background-repeat: no-repeat;
+}
+
+
+li.starred {
+	background-image: url('../img/iconStar.png') ;
+	background-size: 13;
+}
+
+
+
+li.ticked {
+	background-image: url('../img/iconTick.png');
+	background-position: 6px 50%;
+	background-size: 11;
+}
+
+.warning {
+	background-image: url('../img/iconWarning.png');
+}
+
+.disabled{
+	opacity: 0.3;
+}
+
+
+
+.menu li.disabled.hover{
+	background-color: transparent;
+	-webkit-box-shadow:none ;
+}
+
+
+
+
+div#menuContainer {
+	position: absolute;
+	z-index: 99999999;
+	display: none;
+	top:0;
+}
+
+
+.sectionHeading {
+	font-size: 12px !important;
+	position: relative;
+	left: -24px;
+	top: -3px;
+	opacity: 1 !important;
+	height: 16px;
+	color: hsla(0, 0%, 55%, 1.0) !important;
+}
